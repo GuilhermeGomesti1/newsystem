@@ -12,7 +12,7 @@ export default function SignUp(){
 
     async function handleSubmit(e){
         e.preventDefault();
-        if ( name !== '' && email !== '' && password !== '' ) {
+        if ( name !== '' && email !== '' && password !== ''  ) {
            
            await signUp( email, password, name )
         }
@@ -40,7 +40,7 @@ export default function SignUp(){
                onChange={ (e)=> setEmail(e.target.value)}       
                 />
 
-               <input type="password" placeholder='*******'  
+               <input type="password" placeholder='Senha de 6 ou mais caracteres'  
                value={password}
                onChange={ (e)=> setPassword(e.target.value)}       
                 />

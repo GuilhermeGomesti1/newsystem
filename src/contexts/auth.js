@@ -86,6 +86,7 @@ function AuthProvider({children}){
 
         })
         .catch((error)=>{
+            toast.error("ERRO! Preencha todos os dados corretamente! ")
             console.log(error);
             setLoadingAuth(false);
 
