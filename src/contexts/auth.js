@@ -86,7 +86,16 @@ function AuthProvider({children}){
 
         })
         .catch((error)=>{
-            toast.error("ERRO! Preencha todos os dados corretamente! ")
+       
+       
+            if (password.length <= '5') 
+           { return (
+            setLoadingAuth(false),
+            toast.error("Erro! Senha deve conter no minimo 6 caracteres!"   ) )
+            }
+         
+     
+        toast.error("Erro! Preencha todos os dados corretamente!")
             console.log(error);
             setLoadingAuth(false);
 
